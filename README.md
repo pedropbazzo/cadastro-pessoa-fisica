@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/bitcoinj/bitcoinj.png?branch=master)](https://travis-ci.org/bitcoinj/bitcoinj)   [![Coverage Status](https://coveralls.io/repos/bitcoinj/bitcoinj/badge.png?branch=master)](https://coveralls.io/r/bitcoinj/bitcoinj?branch=master) 
 
-## Baixar
-git clone https://github.com/sartorileonardo/cadastro-pessoa.git
 
 ## Executar somente backend (Java 8 + Spring Boot)
 No diretório backend/demo rodar:
@@ -32,7 +30,6 @@ No diretório raiz do projeto, rodar:
 
 ## Testes
 Executar a classe PessoaControllerTest no modo teste da IDE.
-![Testes](https://user-images.githubusercontent.com/7613528/102938629-6fb1d380-448b-11eb-869c-5bdf16f3ab02.png)
 
 ## Documentacao Swagger disponivel em:
 http://localhost:8888/swagger-ui.html
