@@ -35,3 +35,6 @@ Executar a classe PessoaControllerTest no modo teste da IDE.
 http://localhost:8888/swagger-ui.html
 ![DocumentacaoSwagger](https://user-images.githubusercontent.com/7613528/102938861-df27c300-448b-11eb-8aaa-e37545903514.png)
 
+## Deploy 
+
+AWS
