@@ -17,6 +17,6 @@ public class SourceController {
     @ApiOperation(value = "Lista o link do projeto no Github")
     @GetMapping
     public ResponseEntity getLinkSource() {
-        return ResponseEntity.ok().body("https://github.com/sartorileonardo/cadastro-pessoas-fullstack");
+        return ResponseEntity.ok().body("https://github.com/pedropbazzo/cadastro-pessoa-fisica");
     }
 }
