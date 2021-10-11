@@ -47,24 +47,7 @@ public class PessoaController {
     }
 
     @ApiOperation(value = "Altera uma pessoa ja cadastrada")
-    @PutMapping(value = "/{id}")
-    public ResponseEntity update(@PathVariable("id") Integer id,
-                                 @RequestBody Pessoa pessoa) {
-        return repository.findById(id)
-                .map(p -> {
-                    p.setNome(pessoa.getNome());
-                    p.setSexo(pessoa.getSexo());
-                    p.setEmail(pessoa.getEmail());
-                    p.setDataNascimento(pessoa.getDataNascimento());
-                    p.setNaturalidade(pessoa.getNaturalidade());
-                    p.setNacionalidade(pessoa.getNacionalidade());
-                    p.setCpf(pessoa.getCpf());
-
-                    Pessoa pessoaUpdated = repository.save(p);
-
-                    return ResponseEntity.ok().body(pessoaUpdated);
-                }).orElse(ResponseEntity.notFound().build());
-    }
+    
 
     @ApiOperation(value = "Remove uma pessoa cadastrada atraves do seu identificador(ID)")
     @DeleteMapping(path = "/{id}")
