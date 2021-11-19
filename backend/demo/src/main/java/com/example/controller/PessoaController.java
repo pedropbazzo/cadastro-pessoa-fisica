@@ -26,7 +26,8 @@ public class PessoaController {
         return repository.findAll();
     }
 
-    @ApiOperation(value = "Listando pessoas cadastradas atraves do seu identificador unico (ID)")
+    @SuppressWarnings("rawtypes")
+	@ApiOperation(value = "Listando pessoas cadastradas atraves do seu identificador unico (ID)")
     @GetMapping(path = {"/{id}"})
     public ResponseEntity getById(@PathVariable Integer id) {
         return repository.findById(id)
@@ -46,9 +47,11 @@ public class PessoaController {
         return repository.save(pessoa);
     }
 
+    
+    String p;
     @ApiOperation(value = "Altera uma pessoa ja cadastrada")
     @PutMapping(value = "/{id}")
-    public ResponseEntity update(@PathVariable("id") Integer id,
+    public ResponseEntity<Pessoa> update(@PathVariable("id") Integer id,
                                  @RequestBody Pessoa pessoa) {
         return repository.findById(id)
                 .map(p -> {
