@@ -26,7 +26,7 @@ public class PessoaController {
         return repository.findAll();
     }
 
-    @ApiOperation(value = "Lista uma pessoa cadastrada atraves do seu identificador(ID)")
+    @ApiOperation(value = "Listando pessoas cadastradas atraves do seu identificador unico (ID)")
     @GetMapping(path = {"/{id}"})
     public ResponseEntity getById(@PathVariable Integer id) {
         return repository.findById(id)
