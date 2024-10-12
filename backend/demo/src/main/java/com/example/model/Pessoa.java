@@ -31,11 +31,11 @@ public class Pessoa {
     private String sexo;
 
     @ApiModelProperty(value = "Email da pessoa")
-    @Email(regexp=".*@.*\\..*", message = "Email nao esta valido")
+    @Email(regexp = ".*@.*\\..*", message = "Email nao esta valido")
     private String email;
 
     @ApiModelProperty(value = "Data de nascimento da pessoa")
-    @Column(name="data_nascimento")
+    @Column(name = "data_nascimento")
     private String dataNascimento;
 
     @ApiModelProperty(value = "Cidade de naturalidade da pessoa")
@@ -50,78 +50,6 @@ public class Pessoa {
 
     @ApiModelProperty(value = "Data de alteracao do cadastro da pessoa")
     @Column(name = "atualizado", nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    @DateTimeFormat(pattern = "dd/MM/YYYY")
-    public Timestamp atualizado;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getNaturalidade() {
-        return naturalidade;
-    }
-
-    public void setNaturalidade(String naturalidade) {
-        this.naturalidade = naturalidade;
-    }
-
-    public String getNacionalidade() {
-        return nacionalidade;
-    }
-
-    public void setNacionalidade(String nacionalidade) {
-        this.nacionalidade = nacionalidade;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public Timestamp getAtualizado() {
-        return atualizado;
-    }
-
-    public void setAtualizado(Timestamp atualizado) {
-        this.atualizado = atualizado;
-    }
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Timestamp atualizado;
 }
